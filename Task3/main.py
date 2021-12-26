@@ -27,7 +27,6 @@ if __name__ == "__main__":
     # step5
     with open("step4.csv", 'r') as step4:
         step4_writer = csv.reader(step4, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        # step5 = [row for row in step4_writer]
         step5 = list(filter(lambda row: row != [], step4_writer))
 
     # step6
