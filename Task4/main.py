@@ -19,7 +19,7 @@ class Shape:
     def get_distance(self, shape_first, shape_second):
         lenght = math.sqrt(
             ((shape_first.center_x - shape_second.center_x) ** 2) + (
-                        (shape_first.center_y - shape_second.center_y) ** 2)
+                    (shape_first.center_y - shape_second.center_y) ** 2)
         )
         return lenght if lenght > 0 else lenght * -1
 
@@ -76,3 +76,26 @@ class Triangle(Shape):
 
     def get_area(self):
         return ((self.side ** 2) * math.sqrt(3)) / 4
+
+
+if __name__ == "__main__":
+    circle = Circle([10, 10], 5)
+    print(circle.get_center())
+    circle.move(10, 15)
+    print(circle.get_center())
+    print(circle.get_area())
+    square = Square([30, 20], 10)
+    print(square.get_center())
+    print(square.get_vertex())
+    square.move(30, 40)
+    print(square.get_center())
+    print(square.get_vertex())
+    print(square.get_area())
+    triangle = Triangle([60, 20], 15)
+    print(triangle.get_center())
+    print(triangle.get_vertex())
+    triangle.move(60, 15)
+    print(triangle.get_center())
+    print(triangle.get_vertex())
+    print(triangle.get_area())
+
